@@ -1,0 +1,290 @@
+* {
+    margin: 0; /*Définit toutes les marges extérieures des éléments à 0.*/
+    padding: 5px; /*Ajoute un espacement intérieur de 5 pixels pour tous les éléments.*/
+    box-sizing: border-box;/*Cette valeur garantit que la largeur et la hauteur incluent le padding et les bordures, 
+    ce qui évite des ajustements involontaires de la taille de l'élément.*/
+}
+
+body{
+    background: rgb(214, 213, 233);
+    background: linear-gradient(90deg, rgba(6,0,110,1) 0%, rgba(0,212,255,1) 10%, rgb(12, 20, 102) 50%);   
+} 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(53, 64, 83, 0.801);
+    height: 150px;
+}
+
+
+
+nav { 
+        ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; /*aplique un rembourrage de 05rem tout autour du contenu */
+    }
+
+ a {
+    color: rgba(53, 64, 83, 0.205);
+    text-decoration-style: line;/* soulinant*/
+    font-weight: bold;/*Définit le texte de l'étiquette en gras, */
+  }
+}
+/* icones*/
+.intro { 
+    padding: 0.5rem; /*applique un rembourrage de 0.5rem autour du icones*/
+    text-align: end; /*Aligne le icones à droite.*/
+    font-size: 0rem;  /*Définit la taille */
+    background-color: rgba(53, 64, 83, 0.205);
+    margin-bottom: 2rem; /*Ajoute une marge de 2rem en dessous de l'élément .intro.*/
+}
+
+.logo-header {
+    background-color: rgba(53, 64, 83, 0.205);
+    text-align: center;
+    padding: 1.5rem 0; /* Applique un padding de 1,5rem verticalement et 0 horizontalement.*/
+    margin-top: 0.5rem;/*Ajoute une marge de 0,5rem au-dessus de .logo-header.*/
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3rem; /*Définit la taille de la police à 3rem.*/
+    margin: 0; /*Supprime la marge autour du titre*/
+}
+ 
+ /* photos*/
+ .gallery {
+    padding: 1rem;/* Définit la taille du photo */
+}
+
+.image-grid {
+    display: flex; /*tilise Flexbox pour disposer les images de manière flexible.*/
+    gap: 6rem;/*Ajoute un espacement de 6rem entre les éléments dans le conteneur.*/
+    justify-content: center;/* Centre horizontalement les images.*/
+}
+
+.image-grid img {
+    width: 210px;/*Définit une largeur fixe de 210 pixels pour les images.*/
+    height: 260px;/*Définit une hauteur fixe de 260 pixels pour les images.*/
+    object-fit: cover;/*S’assure que les images remplissent leur cadre 
+    tout en maintenant leurs proportions.*/
+}
+
+
+
+
+/* fond beige . video*/
+.services {
+    background-color:rgba(53, 64, 83, 0.205);
+
+    padding: 2rem;/*Applique un rembourrage de 2rem autour du contenu.*/
+  
+    text-align: center;
+
+}
+
+.services-grid {
+    display: flex;  /*Utilise un modèle Flexbox pour l’agencement des services.*/
+    gap: 2rem;/* Ajoute un espacement de 2rem entre les éléments*/
+    justify-content: center;/*Centre horizontalement les éléments dans le conteneur.*/
+    margin: 2rem 0;/*Ajoute une marge de 2rem au-dessus et en dessous du conteneur
+     .services-grid.*/
+}
+
+
+/* bouton*/
+.service-content {
+    margin-bottom: 1rem;/*Ajoute une marge de 1rem en bas de l'élément*/
+}
+
+.read-more-button {
+    display: inline-block; /*Définit l'élément comme un bloc en ligne*/
+    background-color: rgba(53, 64, 83, 0.205);
+    color: white;
+    padding: 0.5rem .5rem; /*Applique un rembourrage intérieur de 0.5rem tout autour du bouton*/
+    text-decoration: none;
+    border-radius: 5px; /*Ajoute un arrondi de 5 pixels*/
+    transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+    background-color: #555;
+
+}
+
+
+
+
+/* care avec video. text*/
+.service {
+    background-color: #f4f4f489;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+.service-content {
+    height: 5rem; /* Limite la hauteur du texte à 3rem */
+    overflow: hidden;
+    transition: height 0.3s ease; /* Ajoute une transition pour l'expansion */
+}
+
+/*image video*/
+
+.image-container {
+    width: 100%;
+    height: 70%; /* Ajustez la hauteur de l'image à 70% de l'espace disponible */
+    overflow: hidden;
+    margin: 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assurez-vous que l'image remplit correctement le conteneur */
+    border-radius: 3px;
+    margin: 0;
+}
+
+
+.service-content.expanded {
+    height: auto; /* Affiche tout le texte lorsque la classe 'expanded' est ajoutée */
+}
+
+.read-more {
+    margin-top: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #555;
+}
+
+
+footer { 
+    background-color:rgba(53, 64, 83, 0.651);
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+  
+    bottom: 0; /* Positionne le footer en bas de la page */
+    
+    padding-bottom: 25px; /* Ajoute une indentation de 25px en bas */
+    width: calc(100% - 20px); /* Ajuste la largeur pour inclure l'indentation sur les côtés */
+   
+}
+
+
+
+/*Media Queries for Various Screen Widths */
+
+/* Small screens, tablets, and large smartphones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .image-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .service {
+        width: 100%;
+    }
+}
+
+/* Medium screens, smaller laptops, and tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .image-grid img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .services-grid {
+        gap: 1.5rem;
+    }
+
+    .service {
+        width: 80%;
+    }
+}
+
+/* Large screens, desktop monitors (max-width: 1440px) */
+@media screen and (max-width: 1440px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+    }
+
+    .image-grid img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .services-grid {
+        gap: 2rem;
+    }
+
+    .service {
+        width: 250px;
+    }
+}
+
+/* Extra-large screens, large desktop monitors (max-width: 2560px) */
+@media screen and (max-width: 2560px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .intro {
+        font-size: 1.3rem;
+    }
+
+    .image-grid img {
+        width: 300px;
+        height: 350px;
+    }
+
+    .services-grid {
+        gap: 3rem;
+    }
+
+    .service {
+        width: 400px;
+    }
+}

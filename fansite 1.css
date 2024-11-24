@@ -1,0 +1,381 @@
+* {
+    margin: 0; /*Définit toutes les marges extérieures des éléments à 0.*/
+    padding: 5px; /*Ajoute un espacement intérieur de 5 pixels pour tous les éléments.*/
+    box-sizing: border-box;/*Cette valeur garantit que la largeur et la hauteur incluent le padding et les bordures, 
+    ce qui évite des ajustements involontaires de la taille de l'élément.*/
+}
+
+body {
+    font-family: Arial, sans-serif; /*Utilise la police Arial*/
+    line-height: 1.6; /*Définit l'espacement entre les lignes à 1,6 fois la taille de la police*/
+    background-size: cover; /*Ajuste l’image de fond pour qu’elle couvre toute la
+     zone, sans distorsion, en préservant les proportions..*/
+    animation: bgChange 20s infinite; /* Applique une animation (non définie dans ce CSS) appelée 
+    bgChange, qui se répète à l'infini avec un cycle de 20 secondes.*/
+}
+
+header {
+    background-color: #130647; /*couleur de fond  */
+   
+    color: #f6f3f1; /*couleur du texte*/
+    padding: 1rem; /*Applique un rembourrage de 1rem*/
+    text-align: center;
+}
+
+nav { 
+        ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /*aplique un rembourrage de 2rem tout autour du contenu */
+    }
+
+ a {
+    color: #ececf1;
+    text-decoration-style: line;/* soulinant*/
+    font-weight: bold;/*Définit le texte de l'étiquette en gras, */
+  }
+}
+
+.logo-header {
+    background-color: #71638471;
+    text-align: center;
+    padding: 1.5rem 0; /* Applique un padding de 1,5rem verticalement et 0 horizontalement.*/
+    margin-top: 0.5rem;/*Ajoute une marge de 0,5rem au-dessus de .logo-header.*/
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3rem; /*Définit la taille de la police à 3rem.*/
+    margin: 0; /*Supprime la marge autour du titre*/
+}
+ /* icones*/
+.intro { 
+    padding: 0.5rem; /*applique un rembourrage de 0.5rem autour du icones*/
+    text-align: end; /*Aligne le icones à droite.*/
+    font-size: 0rem;  /*Définit la taille */
+    background-color: #4e3e59d2;
+    margin-bottom: 2rem; /*Ajoute une marge de 2rem en dessous de l'élément .intro.*/
+}
+ /* photos*/
+ .gallery {
+    padding: 1rem;/* Définit la taille du photo */
+}
+
+.image-grid {
+    display: flex; /*tilise Flexbox pour disposer les images de manière flexible.*/
+    gap: 6rem;/*Ajoute un espacement de 6rem entre les éléments dans le conteneur.*/
+    justify-content: center;/* Centre horizontalement les images.*/
+}
+
+.image-grid img {
+    width: 210px;/*Définit une largeur fixe de 210 pixels pour les images.*/
+    height: 260px;/*Définit une hauteur fixe de 260 pixels pour les images.*/
+    object-fit: cover;/*S’assure que les images remplissent leur cadre 
+    tout en maintenant leurs proportions.*/
+}
+
+
+
+
+/* fond beige . video*/
+.services {
+    background-color: #fbebd9ae;
+
+    padding: 2rem;/*Applique un rembourrage de 2rem autour du contenu.*/
+  
+    text-align: center;
+
+}
+
+.services-grid {
+    display: flex;  /*Utilise un modèle Flexbox pour l’agencement des services.*/
+    gap: 2rem;/* Ajoute un espacement de 2rem entre les éléments*/
+    justify-content: center;/*Centre horizontalement les éléments dans le conteneur.*/
+    margin: 2rem 0;/*Ajoute une marge de 2rem au-dessus et en dessous du conteneur
+     .services-grid.*/
+}
+
+
+/* bouton*/
+.service-content {
+    margin-bottom: 1rem;/*Ajoute une marge de 1rem en bas de l'élément*/
+}
+
+.read-more-button {
+    display: inline-block; /*Définit l'élément comme un bloc en ligne*/
+    background-color: #333;
+    color: white;
+    padding: 0.5rem .5rem; /*Applique un rembourrage intérieur de 0.5rem tout autour du bouton*/
+    text-decoration: none;
+    border-radius: 5px; /*Ajoute un arrondi de 5 pixels*/
+    transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+    background-color: #555;
+
+}
+
+
+
+
+/* care avec video. text*/
+.service {
+    background-color: #f4f4f489;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+.service-content {
+    height: 5rem; /* Limite la hauteur du texte à 3rem */
+    overflow: hidden;
+    transition: height 0.3s ease; /* Ajoute une transition pour l'expansion */
+}
+
+/*image video*/
+
+.image-container {
+    width: 100%;
+    height: 70%; /* Ajustez la hauteur de l'image à 70% de l'espace disponible */
+    overflow: hidden;
+    margin: 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assurez-vous que l'image remplit correctement le conteneur */
+    border-radius: 3px;
+    margin: 0;
+}
+
+
+.service-content.expanded {
+    height: auto; /* Affiche tout le texte lorsque la classe 'expanded' est ajoutée */
+}
+
+.read-more {
+    margin-top: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #555;
+}
+
+
+footer { 
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+  
+    bottom: 0; /* Positionne le footer en bas de la page */
+    
+    padding-bottom: 25px; /* Ajoute une indentation de 25px en bas */
+    width: calc(100% - 20px); /* Ajuste la largeur pour inclure l'indentation sur les côtés */
+   
+}
+
+/* Animation des images d'arrière-plan */
+@keyframes bgChange {
+    0% {
+        background-image: url('img/Capture d’écran 2024-10-22 114212.jpg');
+    }
+    33% {
+        background-image: url('img/Capture d’écran 2024-10-22 113122.jpg');
+    }
+    66% {
+        background-image: url('img/Capture d’écran 2024-10-22 113155.jpg');
+    }
+    100% {
+        background-image: url('img/Capture d’écran 2024-10-22 114126.jpg');
+    }
+}
+
+/* Formulaire de contact */
+.contact-section {
+    margin-bottom: 100px; /*Ajoute un espace de 100 pixels en bas 
+    de la section du formulaire de contact. en dessous*/
+}
+
+.contact-form {
+    margin-top: 50px;/*Ajoute un espace de 50 pixels en haut du formulaire de contact,
+     séparant ainsi le formulaire des éléments au-dessus.*/
+}
+
+.contact-form .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;/*Définit deux colonnes de même largeur, */
+    gap: 50px;/* Définit un espace de 50 pixels entre les colonnes
+     et les rangées de la grille*/
+}
+
+.form-group {
+    display: flex;/*Utilise un modèle d'affichage 
+    flexbox pour organiser les éléments enfants de .form-group. */
+    flex-direction: column;/*: Aligne les éléments enfants.
+    c'est-à-dire verticalement l'un sous l'autre.*/
+}
+
+.form-group label {
+    margin-bottom: 20px; /* Ajoute un espace de 20 pixels sous l'étiquette (<label>)*/
+    font-weight: bold;/*Définit le texte de l'étiquette en gras, */
+}
+
+.form-group input, .form-group select {
+    padding: 25px;  /* Ajoute un espace intérieur (padding) de 25 pixels à l'intérieur des champs de saisie
+     (<input>) et des sélecteurs (<select>*/
+    border: 5px solid #ccc; /*Applique une bordure*/
+    border-radius: 5px;/*/*Arrondit les coins de l'élément*/
+}
+/* Aside avec des informations de contact supplémentaires */
+
+.form-group.full-width {
+    grid-column: 1 / span 2; /*cette propriété indique que l'élément doit s'étendre sur deux colonnes
+     de la grille dans laquelle il se trouve. plus d'espace horizontal.*/
+}
+.form-group.full-width {
+    grid-column: 1 / span 2;
+}
+
+
+.form-group.full-width button {
+    padding: 25px;/*Ajoute un rembourrage intérieur de 15 pixels tout autour du bouton*/
+    background-color: #492e7be6;
+    color: white; /* color texr*/
+    border: none;/*Supprime toute bordure par défaut autour du bouton*/
+    border-radius: 5px;/*Ajoute un arrondi de 5 pixels aux coins du bouton*/
+    cursor: pointer;/*Change le curseur de la souris en une icône "main" lorsque l'utilisateur survole le bouton,
+    indiquant que c'est un élément cliquable.*/
+}
+
+.form-group.full-width button:hover {
+    background-color: #333;
+}
+aside {
+    background-color: #7754727f;
+    color: #ffffff; /* Assure une bonne lisibilité du texte */
+    padding: 20px;/*Ajoute un espace intérieur de 20 pixels autour du contenu de l'élément aside.*/
+    margin-top: 20px;/* Ajoute une marge de 20 pixels au-dessus de l'élément aside,*/
+    border-radius: 10px; /*Arrondit les coins de l'élément avec un rayon de 10 pixels*/
+}
+
+aside ul li {
+    margin: 5px 0; /* Ajoute une marge verticale de 5 pixels au-dessus et en dessous de chaque élément 
+    de liste (<li>), permettant un espacement régulier entre les éléments de la liste à 
+    l'intérieur de l'élément aside.*/
+}
+
+
+/*Media Queries for Various Screen Widths */
+
+/* Small screens, tablets, and large smartphones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .image-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .service {
+        width: 100%;
+    }
+}
+
+/* Medium screens, smaller laptops, and tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .image-grid img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .services-grid {
+        gap: 1.5rem;
+    }
+
+    .service {
+        width: 80%;
+    }
+}
+
+/* Large screens, desktop monitors (max-width: 1440px) */
+@media screen and (max-width: 1440px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+    }
+
+    .image-grid img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .services-grid {
+        gap: 2rem;
+    }
+
+    .service {
+        width: 250px;
+    }
+}
+
+/* Extra-large screens, large desktop monitors (max-width: 2560px) */
+@media screen and (max-width: 2560px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .intro {
+        font-size: 1.3rem;
+    }
+
+    .image-grid img {
+        width: 300px;
+        height: 350px;
+    }
+
+    .services-grid {
+        gap: 3rem;
+    }
+
+    .service {
+        width: 400px;
+    }
+}
